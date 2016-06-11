@@ -1,0 +1,25 @@
+{
+  "name": "aedisevilla-5scd",
+  "version": "1.0.0",
+  "description": "5scd page",
+  "main": "index.html",
+  "dependencies": {
+    "d3": "^3.5.17",
+    "flexboxer": "^0.1.10",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saigesp/aedisevilla-5scd.git"
+  },
+  "author": "aedi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saigesp/aedisevilla-5scd/issues"
+  },
+  "homepage": "https://github.com/Saigesp/aedisevilla-5scd#readme"
+}
