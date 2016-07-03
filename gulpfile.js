@@ -21,20 +21,20 @@ var banner = ['/**',
 
 /* Task to compile less */
 gulp.task('less', function() {  
-  gulp.src('./less/dev/style.less')
+  gulp.src('./assets/less/style.less')
     .pipe(less())
     .pipe(header(banner, {pkg: pkg}))
-    .pipe(gulp.dest('./assets/styles/'));
+    .pipe(gulp.dest('./'));
 });
 
 /* Task to watch less changes */
 gulp.task('watch-less', ['less'], function() {  
-  gulp.watch('./dev/*.less' , ['less']);
+  gulp.watch('./assets/less/*.less' , ['less']);
 });
 
 /* Task to minify css */
 gulp.task('min', ['less'], function() {  
-  gulp.src('./assets/styles/*.css')
+  gulp.src('./*.css')
     .pipe(minifyCSS())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest( './assets/styles/min/' ));

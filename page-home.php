@@ -2,6 +2,9 @@
 
   <!-- flexboxer -->
   <div id="flexboxer-<?php the_ID(); ?>" class="flexboxer flexboxer--index">
+
+    <div id="chart"></div>
+
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
       

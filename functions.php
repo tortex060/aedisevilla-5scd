@@ -5,7 +5,7 @@
  ***********************************/
 // Add more functions
 //include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-//include_once(locate_template('templates/scripts.php'));
+include_once(locate_template('templates/functions/scripts.php'));
 //include_once(locate_template('templates/functions-breadcrumbs.php'));
 
 // Hide admin bar

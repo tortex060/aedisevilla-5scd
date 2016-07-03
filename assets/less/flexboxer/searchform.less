@@ -1,0 +1,37 @@
+/**
+ * SEARCHFORM
+ ***********************************/
+.wrap--search {
+	position: relative;
+	.search {
+		width: ~"calc(100% - 44px)";
+		padding-right: 40px;
+	}
+	.icon {
+		width: 20px;
+		height: auto;
+		background: transparent;
+		opacity: 0.5;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.9;
+		}
+		&--search {
+			position: absolute;
+			top: 0;
+			right: 45px;
+			line-height: 0;
+			padding: 0 10px !important;
+			width: 40px !important;
+			background: transparent;
+			box-sizing: border-box !important;
+			min-height: 45px;
+		}
+		&--backall {
+			width: 30px;
+			line-height: 45px;
+			vertical-align: top;
+			padding: 7px;
+		}
+	}
+}

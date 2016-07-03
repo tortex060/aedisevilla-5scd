@@ -1,0 +1,120 @@
+
+/**
+ * BUTTONS
+ ***********************************/
+input[type="submit"],
+button {
+	#basicbutton;
+	&:hover{
+		background: @button-hover-primary;
+		color: white
+	}
+	&:focus {
+		color: rgba(255,255,255,0.8);
+		outline: 0;
+	}
+	&:active {
+		border-bottom-width: 1px;
+		margin-top: 4px;
+		min-height: 46px;
+	}
+	&:disabled {
+		border-bottom-width: 1px;
+		margin-top: 4px;
+		opacity: 0.4;
+		cursor: default;
+	}
+	&.secondary {
+		background: @button-color-secondary;
+		border-color: @button-shadow-secondary;
+		color: @button-text-secondary;
+		&:hover{
+			background: @button-hover-secondary;
+			color: white;
+		}
+		&:focus {
+			color: rgba(255,255,255,0.8);
+		}
+	}
+}
+
+.button {
+	#basicbutton;
+	padding: 5px 12px;
+	transition: all 200ms ease;
+	&:hover{
+		background-color: rgb(34,153,155);
+		color: white;
+	}
+	&:focus {
+		color: rgba(255,255,255,0.8);
+		outline: 0;
+	}
+	&:active {
+		border-bottom-width: 1px;
+		margin-top: 4px;
+		min-height: 46px;
+	}
+	&:disabled {
+		opacity: 0.4;
+		cursor: default;
+	}
+	&--secondary {
+		#basicbutton;
+		background: @button-color-secondary;
+		border-color: @button-shadow-secondary;
+		color: @button-text-secondary;
+	    text-decoration: none;
+	    text-shadow: none;
+		&:hover{
+			background: @button-hover-secondary;
+			color: white;
+		}
+		&:focus {
+			color: rgba(255,255,255,0.8);
+		}
+	}
+}
+
+.additem {
+	&--fullwidth {
+		width: 100%;
+		text-align: center;
+		color: black;
+		opacity: 0.5;
+		transition: all 200ms ease;
+		&:hover {
+			background: rgba(0,0,0,0.1);
+			opacity: 1;
+		}
+	}
+	p {
+		margin: 0;
+		padding: 15px 0;
+		cursor: pointer;
+	}
+}
+
+
+/**
+ * MEDIA QUERYS
+ *************************************************************************************************/
+@media only screen and (min-width: @query-mobile) {
+
+}
+
+@media only screen and (min-width: @query-tablet) {
+	input[type="submit"],
+	button,
+	.button {
+		min-width: 220px;
+	}
+}
+
+@media only screen and (min-width: @query-desktop) {
+
+}
+
+@media only screen and (min-width: @query-fullscreen) {
+
+}

@@ -1,0 +1,166 @@
+/**
+ * FORMS
+ ***********************************/
+.wrap{
+	&--form {
+		font-size: 1.6rem;
+		input {
+			#basicinput;
+			&:required{
+				&.ng-dirty.ng-invalid,
+	      &.invalid-important {
+					border-left: 5px solid red !important;
+				}
+				&.ng-dirty.ng-valid {
+					border-left: 5px solid green;
+				}
+			}
+		}
+		input[type="checkbox"] {
+			#basiccheckbox;
+			+ label {
+					#basiccheckboxlabel;
+					background-image: @icon-checkbox-grey;
+				&:hover {
+					background-color: #AAA;
+					color: white;
+					background-image: @icon-checkbox-white;
+				}
+				span {
+					margin: 0 15px 0 45px;
+				}
+			}
+			&:focus + label {
+				color: white;
+			}
+			&:checked + label {
+				background-color: #BBB;
+				background-image: @icon-checkbox;
+				border-bottom-width: 1px;
+				margin-top: 4px;
+			}
+		}
+		input[type="radio"] {
+			#basiccheckbox;
+			+ label {
+				#basiccheckboxlabel;
+				background-image: @icon-radio-grey;
+				&:hover {
+					background-color: #AAA;
+					color: white;
+				}
+				span {
+					margin: 0 15px 0 45px;
+				}
+			}
+			&:focus + label {
+				color: white;
+			}
+			&:checked + label {
+				background-color: #BBB;
+				background-image: @icon-radio;
+				border-bottom-width: 1px;
+				margin-top: 4px;
+			}
+		}
+		select{
+			#basicinput;
+			font-size: 1.6rem;
+			width: 100%;
+			min-height: 55px;
+			option {
+				font-size: inherit;
+			}
+			&:required.ng-dirty.ng-invalid {
+				border-left: 5px solid red;
+			}
+			&:required.ng-dirty.ng-valid {
+				border-left: 5px solid green;
+			}
+		}
+		textarea {
+			#basictextarea
+		}
+		label,
+		span {
+			min-height: 45px;
+			line-height: 45px;
+			font-size: inherit;
+		}
+		label {
+			cursor: pointer;
+		}
+		.alert{
+			font-size: 1.4rem;
+			&.alert-danger {
+				color: red;
+			}
+		}
+		.like {
+			display: inline-block;
+			width: auto;
+			background: transparent;
+			padding: 0;
+			min-height: initial;
+			min-width: initial;
+			transition: initial;
+			margin: 0;
+			&:focus {
+    			outline: 0;
+			}
+			&--sep {	
+				vertical-align: middle;
+				font-family: @body-font;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 1.4rem;
+				letter-spacing: 1px;
+			}
+		}
+	}
+	&--submit {
+		min-height: 56px;
+		text-align: right;
+		margin-top: 5px;
+		&__spaced {
+			margin-top: 76px !important;
+		}
+	}
+	&--checkbox {
+		min-height: 57px;
+	}
+}
+
+
+
+/**
+ * MEDIA QUERYS
+ *************************************************************************************************/
+
+@media only screen and (min-width: @query-mobile) {
+	.wrap--form {
+		input {
+			min-width: initial;
+		}
+		select {
+			min-height: 45px;
+		}
+	}
+}
+
+@media only screen and (min-width: @query-tablet) {
+	.wrap--form {
+		input[type="checkbox"] + label,
+		input[type="radio"] + label {
+			width: auto;
+		}
+	}
+}
+
+@media only screen and (min-width: @query-desktop) {
+
+}
+
+@media only screen and (min-width: @query-fullscreen) {
+
+}
