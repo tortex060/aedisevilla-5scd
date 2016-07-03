@@ -121,6 +121,7 @@ body {
 a {
   color: #00bcd4;
   text-decoration: none;
+  cursor: pointer;
 }
 a:focus {
   outline: 0;
@@ -2563,10 +2564,26 @@ pre code {
   box-sizing: border-box;
 }
 .wpcf7-form input[type="submit"] {
-  background: #222;
-}
-.wpcf7-form input[type="submit"]:hover {
-  background: black;
+  margin: 0;
+  padding: 10px 20px;
+  min-height: 50px;
+  min-width: 100%;
+  cursor: pointer;
+  border: 0;
+  font-size: inherit;
+  -webkit-appearance: none;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #245A3C;
+  background: #5FD694;
+  border-bottom: 5px solid #46A26F;
+  text-decoration: none;
+  transition: all 200ms ease;
+  backface-visibility: hidden;
 }
 .wpcf7-form textarea {
   width: 100%;
@@ -2574,6 +2591,10 @@ pre code {
   padding: 15px;
   background: rgba(0, 0, 0, 0.1);
   line-height: 2;
+}
+.wpcf7-form div.wpcf7-response-output {
+  border: 0;
+  padding: 0;
 }
 .cdp-cookies-alerta {
   top: initial !important;
@@ -2621,6 +2642,7 @@ pre code {
   margin: 0;
   padding: 0;
   width: 100%;
+  margin-top: -80px;
 }
 #chart svg {
   display: block;

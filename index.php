@@ -29,7 +29,7 @@
         <?php }?><!-- end of thumbnail -->
 
         <!-- content -->
-        <section class="wrap wrap--content">
+        <section class="wrap wrap--content wrap--spaced">
           <h2><?php the_title();?></h2>
           <?php the_content();?>
         </section><!-- end of content -->

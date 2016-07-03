@@ -38,7 +38,7 @@
   <section class="wrap wrap--content wrap--spaced">
     <h1>Compra de entradas</h1>
     <p>En estos momentos no tenemos entradas a la venta.<br>
-    <a href="<?php bloginfo('url'); ?>">Volver al inicio</p>
+    <a href="<?php bloginfo('url'); ?>">Volver al inicio</a></p>
   </section><!-- end of introduction -->
 
   <?php }

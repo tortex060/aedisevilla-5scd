@@ -1,7 +1,7 @@
 var margin = {top: 50, right: 20, bottom: 50, left: 20 },
     width = parseInt(d3.select('#chart').style('width'), 10),
     width = width - margin.left - margin.right,
-    height = parseInt(d3.select('html').style('height'), 10),
+    height = parseInt(d3.select('html').style('height'), 10) - 80,
     height = height - margin.top - margin.bottom;
 
 var rect_width = width >= 600 ? 100 : width/5,

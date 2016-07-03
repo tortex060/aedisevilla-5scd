@@ -3,15 +3,16 @@
 <!-- footer -->
 <footer id="footer" class="wrap wrap--footer">
 	<div class="flexboxer">
+	
 		<div class="wrap wrap--frame wrap--flex">
 			<div class="wrap wrap--frame__middle">
 				<ul>
-					<li>&copy; <?php the_date('Y');?> <a href="http://www.aedisevilla.es" target="_blank">AEDI Sevilla</a></li>
+					<li> &copy; <?php echo get_the_date('Y');?> <a href="http://www.aedisevilla.es" target="_blank">AEDI Sevilla</a></li>
 				</ul>
 		        <!-- middlemenu -->
-		        <?php if (has_nav_menu('menufooter')) { ?>
+		        <?php /* if (has_nav_menu('menufooter')) { ?>
 		          <?php wp_nav_menu( array( 'theme_location' => 'menufooter', 'container' => false ) ); ?>
-		        <?php } ?><!-- end of middlemenu -->
+		        <?php } */ ?><!-- end of middlemenu -->
 			</div>
 			<div class="wrap wrap--frame__middle text--right">
 				<ul>
