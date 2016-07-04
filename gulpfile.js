@@ -5,13 +5,15 @@
 // Project configuration
 var project         = 'aedisevilla5scd',
     url             = 'http://5scd.aedisevilla.es/',
-    local_port      = 5000,
     bower           = './bower_components/',
     node            = './node_modules/',
-    dist            = './'
+    dist            = './' //Where you have put the project's main root
     flexdir         = './assets/less/flexboxer/', //Where watch for changes in less files
     flexfile        = './assets/less/style.less', //File with list of less modules
-    pluginsdir       = 'assets/plugins/',
+    pluginsdir      = 'assets/plugins/', // Don't put the './' because this is combined with 'dist' var
+
+    sliderdir       = './assets/img/slider/', //Slider image-linker build with Flickity. See Slider task below for more info
+    slidertarget    = 'home.php', //File where you have insert <!-- inject:slider -->
 
     dist_basic_files = [ // Files to copy on dist
         dist + '*.php',
@@ -33,10 +35,11 @@ var project         = 'aedisevilla5scd',
     ],
 
     css_minimized_files = [ // CSS Archives to copy
-        //node + 'flickity/dist/flickity.min.css'
+        node + 'flickity/dist/flickity.min.css'
     ],
 
     js_minimized_files_node = [ // JS Archives to copy
+        node + 'flickity/dist/flickity.pkgd.min.js',
         node + 'd3/*.min.js'
     ],
 
@@ -97,6 +100,9 @@ gulp.task('default', function() {
 });
 
 
+
+
+
 /* LESS Tasks
  *
  ***********************************/
@@ -129,10 +135,15 @@ gulp.task('build', ['min']);
 
 
 
+
+
+
 /* JS & CSS BUILD & INJECT Tasks
  *  
  ***********************************/
 gulp.task('build', ['inject:js:dist', 'inject:css:dist']);
+
+
 
 
 
@@ -170,6 +181,11 @@ gulp.task('inject:css:dist', ['min:csstominimize:dist', 'copy:cssminimized:dist'
 });
 
 
+
+
+
+
+
 /* JS BUILD & INJECT Tasks
  *
  ***********************************/
@@ -203,6 +219,31 @@ gulp.task('inject:js:dist', ['min:jstominimize:dist', 'copy:jsminimizedbower:dis
 });
 
 
+
+
+
+
+
+/* SLIDER BUILD & INJECT Tasks
+ *
+ ***********************************/
+/* Inject all images to home.php */
+gulp.task('slider', function() {
+    return gulp.src(dist + 'home.php')
+        .pipe(inject(
+            gulp.src([sliderdir +'*.jpg'], { read: false }), {
+                starttag: '<!-- inject:slider -->',
+                transform: function(filepath) {
+                    //  if (filepath.slice(-5) === '.docx') {
+                    return '<div class="carousel-cell js-imagefill"><img src="<?php echo get_template_directory_uri(); ?>' + filepath + '"/></div>';
+                    //  }
+                    // Use the default transform as fallback: 
+                    //return inject.transform.apply(inject.transform, arguments);
+                }
+            }
+        ))
+        .pipe(gulp.dest(dist));
+});
 
 
 
@@ -261,7 +302,6 @@ gulp.task('generate-favicon', ['clean:favicon'], function(done) {
         done();
     });
 });
-
 
 /* Copy favicon && Inject markup in dist */
 gulp.task('favicon', ['generate-favicon'], function() {

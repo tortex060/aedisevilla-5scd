@@ -2160,8 +2160,12 @@ button.secondary:focus {
   overflow: hidden;
 }
 .slider--flickity .carousel-cell {
-  width: 100%;
+  /* width: 100%; */
   height: 600px;
+}
+.slider--flickity .carousel-cell img {
+  /* width: 100%; */
+  height: 100%;
 }
 .slider--flickity__small {
   height: 120px;
