@@ -803,7 +803,7 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0;
   clear: both;
-  font-size: 26px;
+  font-size: 2.6rem;
   line-height: 1.3846153846;
 }
 h2 {
@@ -812,7 +812,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 0;
   clear: both;
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 1;
 }
 h3 {
@@ -821,7 +821,7 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0;
   clear: both;
-  font-size: 22px;
+  font-size: 2.2rem;
   line-height: 1.0909090909;
 }
 h4 {
@@ -830,7 +830,7 @@ h4 {
   text-transform: uppercase;
   letter-spacing: 0;
   clear: both;
-  font-size: 20px;
+  font-size: 2.0rem;
   line-height: 1.2;
 }
 h5 {
@@ -839,7 +839,7 @@ h5 {
   text-transform: uppercase;
   letter-spacing: 0;
   clear: both;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 1.3333333333;
 }
 h6 {
@@ -848,7 +848,7 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 0;
   clear: both;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.5;
 }
 .sep {
@@ -913,6 +913,11 @@ h6 {
 }
 .text--center {
   text-align: center;
+}
+mark,
+ins {
+  background: transparent;
+  text-decoration: none;
 }
 /**
  * MEDIA QUERYS
@@ -1600,7 +1605,8 @@ button.secondary:focus {
 .wrap--submit__spaced {
   margin-top: 76px !important;
 }
-.wrap--checkbox {
+.wrap--checkbox,
+.wrap--buttons {
   min-height: 56px;
 }
 /**
@@ -1611,7 +1617,7 @@ button.secondary:focus {
     min-width: initial;
   }
   .wrap--form select {
-    min-height: 45px;
+    min-height: 56px;
   }
 }
 @media only screen and (min-width: 780px) {
@@ -1718,6 +1724,11 @@ button.secondary:focus {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+.list--scroll__ylarge {
+  max-height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 .list--toselect .itemlist {
   cursor: pointer;
 }
@@ -1745,6 +1756,9 @@ button.secondary:focus {
   line-height: 0;
   text-align: right;
 }
+.list > .item .wrap--buttons__left {
+  text-align: left;
+}
 .list > .item:nth-child(odd) {
   background: rgba(0, 0, 0, 0.1);
 }
@@ -1770,7 +1784,7 @@ button.secondary:focus {
   width: 35px;
   height: 35px;
   min-width: 35px;
-  background-size: 24px;
+  background-size: 25px;
   background-color: white;
 }
 /**

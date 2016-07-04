@@ -59,8 +59,8 @@
 			&:checked + label {
 				background-color: @checkbox-background-checked;
 				background-image: @icon-radio;
-				border-bottom-width: 1px;
-				margin-top: 4px;
+				border-bottom-width: @button-border-width-checked;
+				margin-top: @button-border-width - @button-border-width-checked;
 			}
 		}
 		select{
@@ -126,7 +126,8 @@
 			margin-top: 76px !important;
 		}
 	}
-	&--checkbox {
+	&--checkbox,
+	&--buttons {
 		min-height: @wrap-submit-height-min;
 	}
 }
@@ -143,7 +144,7 @@
 			min-width: initial;
 		}
 		select {
-			min-height: 45px;
+			min-height: @wrap-submit-height-min;
 		}
 	}
 }
