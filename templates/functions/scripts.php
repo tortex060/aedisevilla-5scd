@@ -74,6 +74,7 @@ function inject_in_all() { ?>
       jQuery(window).load(function() { 
         
         jQuery('.js-slider').flickity({
+          initialIndex: 2,
           freeScroll: true,
           wrapAround: true,
           autoPlay: 3000
