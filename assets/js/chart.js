@@ -218,7 +218,7 @@ d3.json("../wp-content/themes/aedisevilla-5scd/assets/data/graph3.json", functio
         .style('fill', '#000');
 
     svg.selectAll(".node").classed("fixed", function(j) { j.fixed = false });
-    svg.select(".level--value").text(function() { return parseInt(svg.select('.level--value').text())+1;})
+    svg.select(".level--value").text(function() {return parseInt(svg.select('.level--value').text())+1; })
     svg.select(".title").text("0");
     rect_array = [];
 
