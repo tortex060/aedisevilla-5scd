@@ -54,7 +54,7 @@ function inject_in_all() { ?>
     });
   </script>
 
-  <?php if(is_home() || is_page('shop') || is_archive('product')){ ?> 
+  <?php if(is_home()){ ?> 
 
     <script>
 /*      jQuery(document).ready(function($) {
@@ -70,17 +70,17 @@ function inject_in_all() { ?>
 
         });
       });
-
+*/
       jQuery(window).load(function() { 
-
-        jQuery('.js-imagefill').imagefill(); 
         
         jQuery('.js-slider').flickity({
           initialIndex: 2,
-          wrapAround: true
+          freeScroll: true,
+          wrapAround: true,
+          autoPlay: 3000
         });
       });
-*/
+
     </script>
 
   <?php } if( is_singular('product')){ ?> 

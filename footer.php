@@ -27,10 +27,11 @@
 </footer> <!-- end footer -->
 
   <!-- inject:js -->
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/plugins/d3/d3.min.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/plugins/5scd-game/chart.min.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/plugins/chroma-js/chroma.min.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/plugins/flickity/dist/flickity.pkgd.min.js"></script>
   <!-- endinject -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-  <script src="http://www.saigesp.es/wp-content/uploads/js/chroma.min.js"></script>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/chart.js"></script>
 
 <?php wp_footer(); ?>
 

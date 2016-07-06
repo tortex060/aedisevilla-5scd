@@ -1,6 +1,5 @@
 <div id="menutop" class="menu menu--top js-menu animecubic550">
-
-	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/svg/close.svg" alt="Close menu" class="icon icon--close" onclick="ToggleMenu('close')">
+	<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/svg/close.svg" alt="<php __('Close menu', 'sanderblockecommerce' ) ?>" class="icon icon--close" onclick="ToggleMenu('close')">
 	
 	<!-- topmenu -->
 	<?php if (has_nav_menu('menutop')) { ?>
