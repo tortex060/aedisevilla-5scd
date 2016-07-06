@@ -50,7 +50,9 @@ function inject_in_all() { ?>
 
 
     jQuery(document).ready(function($) {
-
+      if (jQuery('#chart svg').length > 0) jQuery('#chart svg').on('click',function(){
+        ga('send', 'event', 'Game', 'play', 'click');
+      });
     });
   </script>
 
