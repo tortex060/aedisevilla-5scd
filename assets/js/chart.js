@@ -206,6 +206,7 @@ d3.json("../wp-content/themes/aedisevilla-5scd/assets/data/graph3.json", functio
 
     node_group = node_enter.append("g")
         .attr('transform', 'translate(' + (-rect_width/2) + ',' + (-rect_width/2) + ')')
+        .attr('onclick', function() { ga('send', 'event', 'Game', 'play', 'drag'); });
 
     node_back = node_group.append("rect")
         .attr("width", rect_width)
