@@ -20,7 +20,7 @@ $sale = $sale[0];
     <div class="wrap wrap--content wrap--content__middle content content--product">
       <div class="description description--product">
         <h2 class="title title--product title--product"><?php the_title();?></h2>
-        <?php echo $post->post_content;?>
+        <?php echo wpautop($post->post_content, true);?>
       </div>
       <?php echo do_shortcode('[add_to_cart id="'.$post->ID.'"]'); ?> 
     </div>
