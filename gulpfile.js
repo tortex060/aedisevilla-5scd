@@ -116,7 +116,7 @@ gulp.task('less', function() {
 
 /* Task to watch less changes */
 gulp.task('watch-less', ['less'], function() {  
-  gulp.watch('./assets/less/*.less' , ['less']);
+  gulp.watch('./assets/less/*/*.less' , ['less']);
 });
 
 /* Task to minify css */

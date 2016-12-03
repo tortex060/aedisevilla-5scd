@@ -119,13 +119,13 @@ body {
   background: #f5f5f5;
 }
 a {
-  color: #00bcd4;
+  color: #009EE2;
   text-decoration: none;
   cursor: pointer;
 }
 a:focus {
   outline: 0;
-  color: #009FB0;
+  color: #009EE2;
 }
 a:hover,
 a:active {
@@ -133,7 +133,7 @@ a:active {
 }
 a:active,
 a:hover {
-  color: #e91e63;
+  color: #FFED00;
 }
 h1,
 h2,
@@ -457,16 +457,16 @@ body {
 }
 #footer {
   min-height: 40px;
-  background-color: #F1F1F1;
+  background-color: #009EE2;
   position: relative;
   width: 100%;
 }
 #header {
-  background: white;
+  background: #FFED00;
   color: white;
 }
 #navleft {
-  background: #F1F1F1;
+  background: #009EE2;
 }
 #main .flexboxer > .wrap {
   background: #F5F5F5;
@@ -740,7 +740,7 @@ body {
 }
 @media only screen and (min-width: 1120px) {
   body {
-    background: #F1F1F1;
+    background: #009EE2;
   }
   .flexboxer .wrap--controls {
     position: absolute;
@@ -1098,7 +1098,7 @@ ins {
  * MENUS
  ***********************************/
 .menu--top {
-  background: #F1F1F1;
+  background: #009EE2;
   width: 100%;
   height: 0;
   padding-top: 0;
@@ -2647,7 +2647,7 @@ pre code {
   bottom: 0;
   border-top: 1px solid #FFF !important;
   border-bottom: 0 !important;
-  background-color: #F1F1F1 !important;
+  background-color: #009EE2 !important;
 }
 .cdp-cookies-alerta h4,
 .cdp-cookies-alerta .cdp-cookies-boton-creditos {
@@ -2663,52 +2663,42 @@ pre code {
 .cdp-cookies-alerta.cdp-cookies-tema-gris .cdp-cookies-texto a:hover {
   color: white !important;
 }
+.flexboxer h1 {
+  color: #009EE2;
+  font-size: 4rem;
+  font-weight: 900;
+}
+.flexboxer p {
+  font-size: 2rem;
+}
+.flexboxer--background {
+  max-width: 100%;
+  background-color: #009EE2;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.flexboxer--background h1,
+.flexboxer--background p {
+  color: #FFED00;
+}
+.flexboxer .wrap--headlogo img {
+  max-width: 100%;
+}
 .menu--top {
-  background-color: #00bcd4;
+  background-color: #009EE2;
 }
 .wrap--header .menu {
   display: inline-block;
 }
 .wrap--header .menu li a {
-  color: #00bcd4;
+  color: #009EE2;
 }
 .wrap--header .menu li a:hover {
-  color: #e91e63;
+  color: #FFED00;
 }
 .wrap--footer a {
   color: #333;
 }
 .wrap--footer a:hover {
   color: black;
-}
-/* Chart styles */
-#chart {
-  height: 100%;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  margin-top: -80px;
-}
-#chart svg {
-  display: block;
-  margin: 0 auto;
-}
-#chart svg .node {
-  cursor: move;
-  stroke: #000;
-  stroke-width: 0;
-}
-#chart svg .title {
-  font-family: 'Dosis', sans-serif;
-  font-size: 7rem;
-  font-weight: 300;
-  pointer-events: none;
-}
-#chart svg .claim,
-#chart svg .level {
-  font-family: 'Dosis', sans-serif;
-  font-size: 2rem;
-  font-weight: 300;
-  pointer-events: none;
 }
