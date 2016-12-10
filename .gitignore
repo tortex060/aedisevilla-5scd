@@ -2,6 +2,7 @@
 /bower_components
 /.tmp
 /.sass-cache
+sftp-config.*
 
 *.sublime-project
 *.sublime-workspace

@@ -157,7 +157,7 @@ remove_filter('term_description','wpautop');
 
 
 /**
- * FUNCIONES DE USUARIO
+ * USER FUNCTIONS
  ***********************************/
 
 // Add user social links as user meta
@@ -237,6 +237,20 @@ function redirect_after_logout(){
 add_action('wp_logout','redirect_after_logout');
 
 
+
+
+/**
+ * BACKOFFICE FUNCTIONS
+ ***********************************/
+function ocultar_paginas( $query ) {
+        if( !is_admin() )
+                return $query;
+        global $pagenow;
+        if( 'edit.php' == $pagenow && ( get_query_var('post_type') && 'page' == get_query_var('post_type') ) )
+                $query->set('post__not_in', array(5,21,6,7,4)); //IDs de las páginas a ocultar
+        return $query;
+}
+add_action( 'pre_get_posts' ,'ocultar_paginas' );
 
 
 ?>
