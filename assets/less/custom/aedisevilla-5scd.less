@@ -16,6 +16,13 @@
 			color: @yellow;
 		}
 	}
+	&--tickets {
+		max-width: 100%;
+		background: #333;
+		h1 {
+			color: @yellow;
+		}
+	}
 	.wrap--headlogo {
 		img {
 			max-width: 100%;
@@ -35,16 +42,36 @@
 .wrap--header .menu {
 	display: inline-block;
 	li a {
-		color: @link-color-primary;
+		font-weight: 700;
+		color: @yellow;
 		&:hover {
-			color: @link-color-hover;
+			color: @yellow;
 		}
 	}
 }
 
+.wrap--footer ul li,
 .wrap--footer a {
-	color: #333;
+	color: white;
 	&:hover {
-		color: black;
+		color: @yellow;
 	}
+}
+
+.flexboxer--archive__product .wrap--masonry .item {
+	flex: 1 1 200px;
+}
+
+
+
+
+
+
+
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+	border: 1px solid #ccc;
+    padding: 10px 5px;
+    border-radius: 3px;
 }

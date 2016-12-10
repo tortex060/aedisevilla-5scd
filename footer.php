@@ -17,8 +17,8 @@
 			<div class="wrap wrap--frame__middle text--right">
 				<ul>
 					<li>
-					<a href="https://www.facebook.com/aedisevilla/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/svg/facebook.svg" alt="Facebook" class="icon icon--rrss"></a>
-					<a href="https://twitter.com/AEDISevilla" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/svg/twitter.svg" alt="Twitter" class="icon icon--rrss"></a>
+					<a href="https://www.facebook.com/aedisevilla/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/svg/facebook-white.svg" alt="Facebook" class="icon icon--rrss"></a>
+					<a href="https://twitter.com/AEDISevilla" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/svg/twitter-white.svg" alt="Twitter" class="icon icon--rrss"></a>
 					</li>
 				</ul>
 			</div>

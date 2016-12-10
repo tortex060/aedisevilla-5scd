@@ -6,9 +6,8 @@
   <?php if ( have_posts() ) { ?>
 
   <!-- introduction -->
-  <section class="wrap wrap--content wrap--spaced">
-    <h1>Compra de entradas</h1>
-    <p>Escoge rápido, que se acaban!</p>
+  <section class="wrap wrap--content">
+    <h1>Entradas #5SCD</h1>
   </section><!-- end of introduction -->
 
     <section class="wrap wrap--frame wrap--masonry">
@@ -16,8 +15,8 @@
         <div class="item">
           <div class="wrap wrap--frame wrap--thumb" >
             <div class="overflow">
-              <?php woocommerce_template_loop_add_to_cart();?>
-              <a href="<?php the_permalink();?>" class="moreinfo">Detalles</a>
+              
+              <a href="<?php the_permalink();?>" class="moreinfo"><?php the_title();?></a>
             </div>
             <?php echo woocommerce_get_product_thumbnail();?>
           </div>

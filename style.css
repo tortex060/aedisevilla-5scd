@@ -462,11 +462,11 @@ body {
   width: 100%;
 }
 #header {
-  background: #FFED00;
+  background: #009EE2;
   color: white;
 }
 #navleft {
-  background: #009EE2;
+  background: #FFED00;
 }
 #main .flexboxer > .wrap {
   background: #F5F5F5;
@@ -740,7 +740,7 @@ body {
 }
 @media only screen and (min-width: 1120px) {
   body {
-    background: #009EE2;
+    background: #FFED00;
   }
   .flexboxer .wrap--controls {
     position: absolute;
@@ -1098,7 +1098,7 @@ ins {
  * MENUS
  ***********************************/
 .menu--top {
-  background: #009EE2;
+  background: #FFED00;
   width: 100%;
   height: 0;
   padding-top: 0;
@@ -1289,16 +1289,16 @@ button {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: #245A3C;
-  background: #5FD694;
-  border-bottom: 5px solid #46A26F;
+  color: #2A5162;
+  background: #009EE2;
+  border-bottom: 5px solid #037BAE;
   text-decoration: none;
   transition: all 200ms ease;
   backface-visibility: hidden;
 }
 input[type="submit"]:hover,
 button:hover {
-  background: #55BD83;
+  background: #028FCB;
   color: white;
 }
 input[type="submit"]:focus,
@@ -1349,9 +1349,9 @@ button.secondary:focus {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: #245A3C;
-  background: #5FD694;
-  border-bottom: 5px solid #46A26F;
+  color: #2A5162;
+  background: #009EE2;
+  border-bottom: 5px solid #037BAE;
   text-decoration: none;
   backface-visibility: hidden;
   padding: 5px 12px;
@@ -1389,9 +1389,9 @@ button.secondary:focus {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: #245A3C;
-  background: #5FD694;
-  border-bottom: 5px solid #46A26F;
+  color: #2A5162;
+  background: #009EE2;
+  border-bottom: 5px solid #037BAE;
   transition: all 200ms ease;
   backface-visibility: hidden;
   background: #63C8FF;
@@ -2234,9 +2234,9 @@ pre code {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: #245A3C;
-  background: #5FD694;
-  border-bottom: 5px solid #46A26F;
+  color: #2A5162;
+  background: #009EE2;
+  border-bottom: 5px solid #037BAE;
   text-decoration: none;
   transition: all 200ms ease;
   backface-visibility: hidden;
@@ -2244,7 +2244,7 @@ pre code {
 }
 .flexboxer .woocommerce .button:hover,
 .flexboxer .woocommerce .button.alt:hover {
-  background: #55BD83;
+  background: #028FCB;
   color: white;
 }
 .flexboxer .woocommerce .button.checkout-button,
@@ -2527,7 +2527,7 @@ pre code {
 .flexboxer--archive__product .wrap--masonry .item .price > .amount {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #5FD694;
+  color: #009EE2;
 }
 .flexboxer--archive__product .wrap--masonry .item .price del {
   position: absolute;
@@ -2583,9 +2583,9 @@ pre code {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: #245A3C;
-  background: #5FD694;
-  border-bottom: 5px solid #46A26F;
+  color: #2A5162;
+  background: #009EE2;
+  border-bottom: 5px solid #037BAE;
   text-decoration: none;
   transition: all 200ms ease;
   backface-visibility: hidden;
@@ -2681,6 +2681,13 @@ pre code {
 .flexboxer--background p {
   color: #FFED00;
 }
+.flexboxer--tickets {
+  max-width: 100%;
+  background: #333;
+}
+.flexboxer--tickets h1 {
+  color: #FFED00;
+}
 .flexboxer .wrap--headlogo img {
   max-width: 100%;
 }
@@ -2691,14 +2698,26 @@ pre code {
   display: inline-block;
 }
 .wrap--header .menu li a {
-  color: #009EE2;
+  font-weight: 700;
+  color: #FFED00;
 }
 .wrap--header .menu li a:hover {
   color: #FFED00;
 }
+.wrap--footer ul li,
 .wrap--footer a {
-  color: #333;
+  color: white;
 }
+.wrap--footer ul li:hover,
 .wrap--footer a:hover {
-  color: black;
+  color: #FFED00;
+}
+.flexboxer--archive__product .wrap--masonry .item {
+  flex: 1 1 200px;
+}
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+  border: 1px solid #ccc;
+  padding: 10px 5px;
+  border-radius: 3px;
 }

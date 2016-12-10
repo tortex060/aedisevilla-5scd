@@ -24,7 +24,7 @@ wp_reset_postdata();
 </div>
 
 <?php $post_id = 54; $post_object = get_post( $post_id ); ?>
-<div class="flexboxer flexboxer--leitmotiv">
+<div class="flexboxer flexboxer--leitmotiv hidden">
   <section class="wrap wrap--content wrap--spaced wrap--flex">
     <div class="wrap wrap--frame wrap--frame__middle">
       <h1><?php echo get_the_title($post_id);?></h1>
@@ -41,7 +41,7 @@ wp_reset_postdata();
 </div>
 
 <?php $post_id = 56; $post_object = get_post( $post_id ); ?>
-<div class="flexboxer flexboxer--program flexboxer--background" style="background-image: url('<?php if (has_post_thumbnail($post_id)) echo get_the_post_thumbnail_url($post_id,'full'); else echo get_stylesheet_directory_uri().'/assets/img/box/box.jpg'; ?>')">
+<div class="flexboxer flexboxer--program flexboxer--background hidden" style="background-image: url('<?php if (has_post_thumbnail($post_id)) echo get_the_post_thumbnail_url($post_id,'full'); else echo get_stylesheet_directory_uri().'/assets/img/box/box.jpg'; ?>')">
   <section class="wrap wrap--content wrap--flex wrap--spaced">
     <div class="wrap wrap--frame wrap--frame__middle">
       <h1><?php echo get_the_title($post_id);?></h1>
@@ -53,7 +53,7 @@ wp_reset_postdata();
 
 
 <?php $post_id = 58; $post_object = get_post( $post_id ); ?>
-<div class="flexboxer flexboxer--archive flexboxer--archive__product">
+<div class="flexboxer flexboxer--tickets flexboxer--archive flexboxer--archive__product">
   <?php if ( $product_query->have_posts() ) { ?>
     <section class="wrap wrap--content">
       <h1><?php echo get_the_title($post_id);?></h1>
@@ -63,8 +63,7 @@ wp_reset_postdata();
         <div class="item">
           <div class="wrap wrap--frame wrap--thumb" >
             <div class="overflow">
-              <?php woocommerce_template_loop_add_to_cart();?>
-              <a href="<?php the_permalink();?>" class="moreinfo">Detalles</a>
+              <a href="<?php the_permalink();?>" class="moreinfo"><?php the_title();?></a>
             </div>
             <?php echo woocommerce_get_product_thumbnail();?>
           </div>
@@ -96,9 +95,14 @@ wp_reset_postdata();
 
 <?php $post_id = 61; $post_object = get_post( $post_id ); ?>
 <div class="flexboxer flexboxer--program">
-  <section class="wrap wrap--content">
-    <h1><?php echo get_the_title($post_id);?></h1>
-    <?php echo apply_filters('the_content',$post_object->post_content);?>
+  <section class="wrap wrap--frame wrap--flex">
+    <div class="wrap wrap--content wrap--content__middle">
+      <h1><?php echo get_the_title($post_id);?></h1>
+      <?php echo apply_filters('the_content',$post_object->post_content);?>
+    </div>
+    <div class="wrap wrap--content wrap--content__middle">
+      <?php echo do_shortcode('[contact-form-7 id="20" title="Contacto general"]');?>
+    </div>
   </section>
 </div>
 
